@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bigi's Cakes | Wedding Cake Estimator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="estimator-page">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="logo" href="index.html">Bigi's Cakes</a>
+        <nav class="nav-links">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#portfolio">Portfolio</a>
+          <a class="active" href="estimate.html">Cake Estimator</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <a class="button button-outline" href="index.html#contact">Book a Tasting</a>
+      </div>
+    </header>
+
+    <main class="estimator">
+      <section class="container estimator-header">
+        <div>
+          <p class="eyebrow">Cake Estimator</p>
+          <h1>Create a custom estimate.</h1>
+          <p class="section-subtitle">
+            Select your tiers, flavors, and finishing details. We'll refine pricing when we meet.
+          </p>
+        </div>
+        <div class="estimator-note">
+          <h3>How it works</h3>
+          <ul>
+            <li>Pick the tier size based on your guest count.</li>
+            <li>Choose your flavor palette and design style.</li>
+            <li>Submit your details to receive a tailored proposal.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="container estimator-grid">
+        <form class="estimator-form" id="estimate-form">
+          <label>
+            Guest count
+            <select name="guest-count" id="guest-count">
+              <option value="">Choose a range</option>
+              <option value="650">50-80 guests</option>
+              <option value="850">80-120 guests</option>
+              <option value="1100">120-180 guests</option>
+              <option value="1400">180-250 guests</option>
+            </select>
+          </label>
+          <label>
+            Number of tiers
+            <select name="tiers" id="tiers">
+              <option value="">Select tiers</option>
+              <option value="0">Two tiers</option>
+              <option value="120">Three tiers</option>
+              <option value="240">Four tiers</option>
+              <option value="360">Five tiers</option>
+            </select>
+          </label>
+          <label>
+            Cake flavor
+            <select name="cake-flavor" id="cake-flavor">
+              <option value="">Choose a flavor</option>
+              <option value="0">Vanilla bean</option>
+              <option value="40">Chocolate truffle</option>
+              <option value="55">Almond rose</option>
+              <option value="35">Lemon lavender</option>
+            </select>
+          </label>
+          <label>
+            Filling
+            <select name="filling" id="filling">
+              <option value="">Select a filling</option>
+              <option value="0">Strawberry compote</option>
+              <option value="35">Salted caramel</option>
+              <option value="45">Raspberry mousse</option>
+              <option value="60">Champagne buttercream</option>
+            </select>
+          </label>
+          <label>
+            Design style
+            <select name="design-style" id="design-style">
+              <option value="">Pick a style</option>
+              <option value="0">Classic floral</option>
+              <option value="-30">Modern minimalist</option>
+              <option value="75">Textured romantic</option>
+              <option value="110">Statement metallics</option>
+            </select>
+          </label>
+          <label>
+            Wedding date
+            <input type="date" name="event-date" />
+          </label>
+          <label>
+            Add-ons
+            <select name="addons" id="addons">
+              <option value="">Optional enhancements</option>
+              <option value="85">Fresh floral cascade</option>
+              <option value="120">Hand-painted detailing</option>
+              <option value="60">Custom monogram topper</option>
+              <option value="150">Delivery + setup</option>
+            </select>
+          </label>
+          <label>
+            Notes
+            <textarea name="notes" rows="4" placeholder="Share color palettes or inspiration"></textarea>
+          </label>
+          <button class="button" type="submit">Send Estimate Request</button>
+        </form>
+
+        <aside class="estimate-summary">
+          <h3>Your estimate summary</h3>
+          <div class="summary-card">
+            <p class="summary-title">Estimated price range</p>
+            <p class="summary-price" id="estimate-range">$650 - $1,200</p>
+            <p class="summary-detail">
+              Pricing depends on guest count, detail level, and delivery location.
+            </p>
+            <p class="summary-detail estimate-hint" id="estimate-hint">
+              Choose a guest range and tiers to see a live estimate.
+            </p>
+          </div>
+          <div class="summary-card">
+            <p class="summary-title">What you'll receive</p>
+            <ul>
+              <li>Custom design consultation</li>
+              <li>Flavor pairing guide</li>
+              <li>Timeline and delivery plan</li>
+            </ul>
+          </div>
+          <div class="summary-card">
+            <p class="summary-title">Next steps</p>
+            <p class="summary-detail">
+              We'll follow up within 48 hours to confirm details and schedule your tasting.
+            </p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer footer-compact">
+      <div class="container footer-compact-inner">
+        <p>Have questions? Email us at hello@bigiscakes.com</p>
+        <a class="button button-outline" href="index.html#contact">Contact Us</a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
