@@ -237,6 +237,7 @@ a {
   height: 220px;
   width: 100%;
   object-fit: cover;
+  cursor: zoom-in;
 }
 
 .portfolio-info {
@@ -418,6 +419,48 @@ textarea {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 16, 17, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  padding: 24px;
+  z-index: 20;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox img {
+  width: min(900px, 100%);
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink);
+  cursor: pointer;
 }
 
 @media (max-width: 900px) {
